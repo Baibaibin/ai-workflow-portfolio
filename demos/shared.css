@@ -1,0 +1,93 @@
+:root {
+  --ink: #172033;
+  --muted: #667085;
+  --paper: #f5f7f8;
+  --panel: #ffffff;
+  --line: #d7dde3;
+  --teal: #0f766e;
+  --teal-soft: #e7f3f1;
+  --blue: #2e5f9e;
+  --blue-soft: #eaf0f8;
+  --amber: #a46618;
+  --amber-soft: #f8efe2;
+  --red: #a43b3b;
+  --red-soft: #f8eaea;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+body { padding: 36px; }
+
+.frame {
+  width: 1528px;
+  height: 828px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.topbar {
+  height: 92px;
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 5px;
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1, h2, h3, p { margin-top: 0; }
+h1 { margin-bottom: 0; font: 700 26px/1.2 "Aptos Display", "Microsoft YaHei", sans-serif; }
+h2 { margin-bottom: 14px; font-size: 18px; }
+h3 { margin-bottom: 6px; font-size: 15px; }
+p { color: var(--muted); line-height: 1.55; }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 30px;
+  padding: 5px 10px;
+  color: var(--teal);
+  background: var(--teal-soft);
+  border: 1px solid #bad8d4;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.content { height: calc(100% - 92px); padding: 24px 28px 28px; }
+.panel { border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+.label { color: var(--muted); font-size: 12px; font-weight: 600; }
+.value { color: var(--ink); font-size: 22px; font-weight: 750; }
+.mono { font-family: "Cascadia Mono", Consolas, monospace; }
+.small { font-size: 12px; }
+.muted { color: var(--muted); }
+.teal { color: var(--teal); }
+.blue { color: var(--blue); }
+.amber { color: var(--amber); }
+.red { color: var(--red); }
+
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { padding: 11px 12px; text-align: left; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); background: #fafbfc; font-size: 11px; text-transform: uppercase; }
+tr:last-child td { border-bottom: 0; }

@@ -1,0 +1,25 @@
+{
+  "scope": "synthetic public portfolio demo",
+  "facts": [
+    {
+      "claim": "示例品牌成立于 2018 年",
+      "status": "confirmed",
+      "source": "虚构公开工商资料"
+    },
+    {
+      "claim": "已服务超过 50 万用户",
+      "status": "requires_source",
+      "source": ""
+    },
+    {
+      "claim": "行业排名第一",
+      "status": "do_not_use",
+      "source": ""
+    },
+    {
+      "claim": "计划逐步拓展重点区域",
+      "status": "target",
+      "source": "虚构年度计划"
+    }
+  ]
+}

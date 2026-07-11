@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>多模型文稿审议 - 合成演示</title>
+  <link rel="stylesheet" href="../shared.css">
+  <style>
+    .summary { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; margin-bottom: 18px; }
+    .stage-list { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+    .stage { min-height: 86px; padding: 13px; background: #fafbfc; border: 1px solid var(--line); border-radius: 5px; }
+    .stage.done { background: var(--teal-soft); border-color: #bad8d4; }
+    .stage-index { display: block; margin-bottom: 16px; color: var(--muted); font: 600 11px/1 "Cascadia Mono", monospace; }
+    .stage strong { font-size: 13px; }
+    .fact-box { padding: 18px; }
+    .fact-row { display: grid; grid-template-columns: 100px 1fr 110px; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 12px; }
+    .fact-row:last-child { border-bottom: 0; }
+    .status { width: fit-content; padding: 4px 7px; border-radius: 3px; font: 650 10px/1.2 "Cascadia Mono", monospace; }
+    .confirmed { color: var(--teal); background: var(--teal-soft); }
+    .source { color: var(--amber); background: var(--amber-soft); }
+    .blocked { color: var(--red); background: var(--red-soft); }
+    .result { display: grid; grid-template-columns: 1.05fr .95fr; gap: 18px; }
+    .result > section { padding: 17px 18px; }
+    .finding { display: grid; grid-template-columns: 34px 1fr; gap: 10px; margin-top: 12px; }
+    .finding-code { width: 28px; height: 28px; display: grid; place-items: center; color: var(--blue); background: var(--blue-soft); border-radius: 4px; font: 700 11px/1 "Cascadia Mono", monospace; }
+    .finding p { margin-bottom: 0; font-size: 12px; }
+    .qa { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
+    .qa div { padding: 13px; background: #fafbfc; border: 1px solid var(--line); border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <main class="frame">
+    <header class="topbar">
+      <div><p class="eyebrow">SYNTHETIC PUBLIC DEMO</p><h1>多模型文稿审议工作流</h1></div>
+      <span class="badge"><span class="dot"></span>Status: passed</span>
+    </header>
+    <div class="content">
+      <section class="summary">
+        <div>
+          <h2>审议阶段</h2>
+          <div class="stage-list">
+            <div class="stage done"><span class="stage-index">01</span><strong>事实关卡</strong></div>
+            <div class="stage done"><span class="stage-index">02</span><strong>独立审议</strong></div>
+            <div class="stage done"><span class="stage-index">03</span><strong>交叉审查</strong></div>
+            <div class="stage done"><span class="stage-index">04</span><strong>修订</strong></div>
+            <div class="stage done"><span class="stage-index">05</span><strong>仲裁</strong></div>
+            <div class="stage done"><span class="stage-index">06</span><strong>最终 QA</strong></div>
+          </div>
+        </div>
+        <div class="panel fact-box">
+          <h2>事实账本</h2>
+          <div class="fact-row"><span class="status confirmed">confirmed</span><span>品牌成立于 2018 年</span><span class="muted">公开工商资料</span></div>
+          <div class="fact-row"><span class="status source">requires_source</span><span>服务用户超过 50 万</span><span class="amber">降级表述</span></div>
+          <div class="fact-row"><span class="status blocked">do_not_use</span><span>行业排名第一</span><span class="red">禁止写入</span></div>
+        </div>
+      </section>
+      <section class="result">
+        <section class="panel">
+          <p class="eyebrow">CONSENSUS FINDINGS</p><h2>三项关键修订</h2>
+          <div class="finding"><span class="finding-code">F1</span><div><h3>目标不能写成既成成果</h3><p>将“已覆盖全国市场”调整为“计划逐步拓展重点区域”。</p></div></div>
+          <div class="finding"><span class="finding-code">F2</span><div><h3>缺少来源的数据需要降级</h3><p>用户规模暂未获得可引用来源，终稿删除具体数字。</p></div></div>
+          <div class="finding"><span class="finding-code">F3</span><div><h3>保留可核验的产品事实</h3><p>产品发布时间与功能范围已由公开材料确认，可直接使用。</p></div></div>
+        </section>
+        <section class="panel">
+          <p class="eyebrow">FINAL QA</p><h2>发布前检查</h2>
+          <p>合成稿件完成事实、引用、目标表述和输出结构检查，进入人工终审。</p>
+          <div class="qa"><div><span class="label">事实风险</span><strong class="value teal">0</strong></div><div><span class="label">待确认项</span><strong class="value amber">1</strong></div><div><span class="label">禁用事实</span><strong class="value red">1</strong></div></div>
+          <table style="margin-top:16px"><thead><tr><th>检查项</th><th>结果</th></tr></thead><tbody><tr><td>目标 / 事实区分</td><td class="teal">通过</td></tr><tr><td>来源覆盖</td><td class="teal">通过</td></tr><tr><td>人工终审</td><td class="amber">保留</td></tr></tbody></table>
+        </section>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

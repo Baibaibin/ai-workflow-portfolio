@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI 搜索可见性监测 - 合成演示</title>
+  <link rel="stylesheet" href="../shared.css">
+  <style>
+    .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 18px; }
+    .kpi { padding: 15px 16px; border: 1px solid var(--line); border-radius: 5px; }
+    .delta { margin-left: 8px; color: var(--teal); font-size: 11px; font-weight: 700; }
+    .grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 18px; }
+    .grid > section { padding: 17px 18px; }
+    .bar-row { display: grid; grid-template-columns: 112px 1fr 48px; gap: 12px; align-items: center; margin: 15px 0; font-size: 12px; }
+    .track { height: 9px; overflow: hidden; background: #edf0f3; border-radius: 2px; }
+    .bar { height: 100%; background: var(--teal); }
+    .bar.blue { background: var(--blue); }
+    .bar.amber { background: var(--amber); }
+    .legend { display: flex; gap: 18px; margin-top: 18px; color: var(--muted); font-size: 11px; }
+    .legend i { display: inline-block; width: 9px; height: 9px; margin-right: 6px; border-radius: 2px; }
+    .evidence { margin-top: 18px; padding: 0; overflow: hidden; }
+    .pill { display: inline-block; padding: 4px 7px; border-radius: 3px; font: 650 10px/1.2 "Cascadia Mono", monospace; }
+    .yes { color: var(--teal); background: var(--teal-soft); }
+    .partial { color: var(--amber); background: var(--amber-soft); }
+    .no { color: var(--muted); background: #eef1f4; }
+  </style>
+</head>
+<body>
+  <main class="frame">
+    <header class="topbar">
+      <div><p class="eyebrow">SYNTHETIC PUBLIC DEMO</p><h1>AI 搜索可见性监测</h1></div>
+      <span class="badge"><span class="dot"></span>虚构品牌 · 合成数据</span>
+    </header>
+    <div class="content">
+      <section class="kpis">
+        <div class="kpi"><span class="label">Presence Rate</span><div><span class="value">62%</span><span class="delta">+8pp</span></div></div>
+        <div class="kpi"><span class="label">Top 3 Rate</span><div><span class="value">38%</span><span class="delta">+5pp</span></div></div>
+        <div class="kpi"><span class="label">MRR</span><div><span class="value">0.46</span><span class="delta">+0.07</span></div></div>
+        <div class="kpi"><span class="label">Citation Quality</span><div><span class="value">71%</span><span class="delta">+4pp</span></div></div>
+      </section>
+      <section class="grid">
+        <section class="panel">
+          <p class="eyebrow">CATEGORY VIEW</p><h2>问题类型表现</h2>
+          <div class="bar-row"><span>品牌认知</span><div class="track"><div class="bar" style="width:82%"></div></div><strong>82%</strong></div>
+          <div class="bar-row"><span>产品比较</span><div class="track"><div class="bar blue" style="width:64%"></div></div><strong>64%</strong></div>
+          <div class="bar-row"><span>选购建议</span><div class="track"><div class="bar amber" style="width:51%"></div></div><strong>51%</strong></div>
+          <div class="bar-row"><span>使用场景</span><div class="track"><div class="bar" style="width:43%"></div></div><strong>43%</strong></div>
+          <div class="legend"><span><i style="background:var(--teal)"></i>自然问题</span><span><i style="background:var(--blue)"></i>比较问题</span><span><i style="background:var(--amber)"></i>需继续优化</span></div>
+        </section>
+        <section class="panel">
+          <p class="eyebrow">COMPETITIVE GAP</p><h2>推荐位置对比</h2>
+          <div class="bar-row"><span>示例品牌 A</span><div class="track"><div class="bar" style="width:68%"></div></div><strong>0.68</strong></div>
+          <div class="bar-row"><span>示例品牌 B</span><div class="track"><div class="bar blue" style="width:57%"></div></div><strong>0.57</strong></div>
+          <div class="bar-row"><span>示例品牌 C</span><div class="track"><div class="bar amber" style="width:41%"></div></div><strong>0.41</strong></div>
+          <p class="small" style="margin-top:24px">指标用于说明问题集、采集结果、品牌识别、排名计算与复测之间的技术链路，不代表真实品牌表现。</p>
+        </section>
+      </section>
+      <section class="panel evidence">
+        <table><thead><tr><th>问题</th><th>平台</th><th>出现</th><th>推荐位置</th><th>引用</th><th>证据状态</th></tr></thead><tbody>
+          <tr><td>通勤场景适合选择哪类轻食？</td><td>模型 A</td><td><span class="pill yes">YES</span></td><td>2</td><td>行业媒体</td><td><span class="pill yes">完整</span></td></tr>
+          <tr><td>三款常温食品如何比较？</td><td>模型 B</td><td><span class="pill yes">YES</span></td><td>4</td><td>未引用</td><td><span class="pill partial">待复核</span></td></tr>
+          <tr><td>办公室储备食品怎么选？</td><td>模型 C</td><td><span class="pill no">NO</span></td><td>—</td><td>—</td><td><span class="pill no">未出现</span></td></tr>
+        </tbody></table>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI 视频封面生成工具 - 合成演示</title>
+  <link rel="stylesheet" href="../shared.css">
+  <style>
+    .cover-layout { display: grid; grid-template-columns: 360px 1fr; height: 100%; }
+    .controls { padding: 22px; border-right: 1px solid var(--line); background: #fbfcfc; }
+    .field { margin-bottom: 17px; }
+    .field label { display: block; margin-bottom: 7px; color: #344054; font-size: 12px; font-weight: 700; }
+    .input, .upload { min-height: 42px; padding: 11px 12px; border: 1px solid var(--line); border-radius: 4px; background: #fff; color: #344054; font-size: 13px; }
+    .upload { border-style: dashed; color: var(--muted); }
+    .action { width: 100%; padding: 12px; color: #fff; background: var(--teal); border: 0; border-radius: 4px; font-weight: 700; }
+    .workspace { padding: 24px 26px; }
+    .workspace-head { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 20px; }
+    .workspace-head p { margin-bottom: 0; }
+    .candidate-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .candidate { overflow: hidden; border: 1px solid var(--line); border-radius: 6px; }
+    .cover-art { aspect-ratio: 16/9; position: relative; overflow: hidden; padding: 28px; color: #fff; background: #203a43; }
+    .cover-art.two { color: #172033; background: #dde7e5; }
+    .cover-art.three { background: #293349; }
+    .stripe { position: absolute; inset: 0 auto 0 0; width: 18px; background: var(--teal); }
+    .two .stripe { background: var(--amber); }
+    .three .stripe { background: #6f88b5; }
+    .cover-number { display: block; margin-bottom: 42px; font: 600 12px/1 "Cascadia Mono", monospace; opacity: .78; }
+    .cover-title { max-width: 300px; margin: 0; color: inherit; font: 750 24px/1.2 "Aptos Display", "Microsoft YaHei", sans-serif; }
+    .cover-sub { position: absolute; left: 28px; bottom: 18px; color: inherit; font-size: 12px; opacity: .82; }
+    .candidate-meta { display: flex; justify-content: space-between; padding: 12px 13px; font-size: 12px; }
+    .proof { margin-top: 18px; padding: 15px 16px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .proof div { padding-right: 12px; border-right: 1px solid var(--line); }
+    .proof div:last-child { border-right: 0; }
+    .proof strong { display: block; margin-top: 5px; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main class="frame">
+    <header class="topbar">
+      <div><p class="eyebrow">PUBLIC SOURCE PROJECT</p><h1>AI 视频封面生成工具</h1></div>
+      <span class="badge"><span class="dot"></span>公开源码 · 合成演示</span>
+    </header>
+    <section class="content" style="padding:0">
+      <div class="cover-layout">
+        <aside class="controls">
+          <div class="field"><label>主素材</label><div class="upload">synthetic-city-run.jpg</div></div>
+          <div class="field"><label>参考图</label><div class="upload">reference-layout.png</div></div>
+          <div class="field"><label>主标题</label><div class="input">把夜晚跑成自己的主场</div></div>
+          <div class="field"><label>副标题</label><div class="input">城市夜跑计划 · 合成公开示例</div></div>
+          <div class="field"><label>Logo 策略</label><div class="input">不使用品牌 Logo</div></div>
+          <button class="action">生成 3 组封面候选</button>
+          <p class="small" style="margin-top:16px">公开画面使用虚构主题，不包含真实商品、品牌素材或内部数据。</p>
+        </aside>
+        <div class="workspace">
+          <div class="workspace-head">
+            <div><h2>候选对比</h2><p>同一输入下比较信息层级、标题安全区与导出兜底。</p></div>
+            <span class="label mono">TASK 2026-0711-DEMO</span>
+          </div>
+          <div class="candidate-grid">
+            <article class="candidate"><div class="cover-art"><span class="stripe"></span><span class="cover-number">01 / FOCUS</span><p class="cover-title">把夜晚跑成自己的主场</p><span class="cover-sub">城市夜跑计划</span></div><div class="candidate-meta"><strong>主体优先</strong><span class="teal">可导出</span></div></article>
+            <article class="candidate"><div class="cover-art two"><span class="stripe"></span><span class="cover-number">02 / EDITORIAL</span><p class="cover-title">城市入夜<br>脚步醒来</p><span class="cover-sub">CITY RUN · 21:30</span></div><div class="candidate-meta"><strong>编辑版式</strong><span class="teal">可导出</span></div></article>
+            <article class="candidate"><div class="cover-art three"><span class="stripe"></span><span class="cover-number">03 / SAFE TYPE</span><p class="cover-title">夜跑不是逃离<br>是重新掌握节奏</p><span class="cover-sub">程序叠字兜底</span></div><div class="candidate-meta"><strong>文字兜底</strong><span class="teal">可导出</span></div></article>
+          </div>
+          <div class="proof panel"><div><span class="label">输入</span><strong>素材 / 标题 / 参考图</strong></div><div><span class="label">生成</span><strong>模型完整设计</strong></div><div><span class="label">兜底</span><strong>程序叠字与 Logo</strong></div><div><span class="label">验证</span><strong>测试 + 构建检查</strong></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

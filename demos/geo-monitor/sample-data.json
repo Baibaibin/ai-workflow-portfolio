@@ -1,0 +1,35 @@
+{
+  "notice": "Synthetic public demo data. Not real brand performance.",
+  "metrics": {
+    "presence_rate": 0.62,
+    "top3_rate": 0.38,
+    "mrr": 0.46,
+    "citation_quality": 0.71
+  },
+  "rows": [
+    {
+      "question": "通勤场景适合选择哪类轻食？",
+      "platform": "模型 A",
+      "present": true,
+      "rank": 2,
+      "citation": "行业媒体",
+      "evidence_status": "完整"
+    },
+    {
+      "question": "三款常温食品如何比较？",
+      "platform": "模型 B",
+      "present": true,
+      "rank": 4,
+      "citation": "",
+      "evidence_status": "待复核"
+    },
+    {
+      "question": "办公室储备食品怎么选？",
+      "platform": "模型 C",
+      "present": false,
+      "rank": null,
+      "citation": "",
+      "evidence_status": "未出现"
+    }
+  ]
+}
